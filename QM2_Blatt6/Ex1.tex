@@ -1,0 +1,49 @@
+\section{The H2 Molecule}
+
+Ansatz: $H_i^x \Phi_x \left(\vec{r}_i \right) = E_{1s} \Phi_x \left(\vec{r}_i \right)$.\\
+Wenn man die Atome mit gen\"ugend Abstand betrachtet, l\"asst sich folgende N\"aherung machen:\\
+$\Psi_{H_2^+} \left(\vec{r} \right) = \left[\Phi_A \pm \Phi_B \right] / N$\\
+Mit Hartree-Fock-Ansatz ergibt sich folgende Wellenfunktion:
+\begin{align}
+\Psi_{H_2^+} \left(\vec{r}_1,\vec{r}_2 \right) = \Psi_{H_2^+}^{\pm} \left(\vec{r}_1\right) \Psi_{H_2^+}^{\pm} \left(\vec{r}_2\right) \\
+= \Phi_A \left(\vec{r}_1\right) \Phi_B \left(\vec{r}_2\right)  \pm \Phi_B \left(\vec{r}_1\right) \Phi_A \left(\vec{r}_2\right)
+\end{align}
+In der Aufgabe wird nur das elektronische Problem behandelt, $R_A$ und $R_B$ sind konstant.
+
+\subsection{a)}
+
+\begin{align}
+E_0 \leq E_{\pm} \left( R \right) = \left[ \Bra{\Phi_A} \Bra{\Phi_B} \pm \Bra{\Phi_B} \Bra{\Phi_A} \right] \left[ \Ket{\Phi_A} \Ket{\Phi_B} \pm \Ket{\Phi_B} \Ket{\Phi_A} \right] \\
+= 1 \pm S_{AB}S_{BA} \pm S_{BA}S_{AB} + 1 \\
+= 2 \left( 1 \pm |S_{AB}|^2 \right)
+\end{align}
+Mit $S_{AB} = \Braket{\Phi_A | \Phi_B}$. Wir machen hier die Konvention, dass die Position der Wellenfunktion im Produkt \textbf{Teilchen 1} und \textbf{Teilchen 2} bestimmt. Im ersten Term hat also \textbf{Teilchen 1} die \textbf{Wellenfunktion A}.\\
+\\
+Nun haben wir die Energie. Um die Energie mit dem Hamiltonien zu verkn\"upfen, nutzen wir die Schr\"odinger-Gleichung:
+\begin{align}
+E = \Bra{\Psi_{\pm}} H \Ket{\Psi_{\pm}} \\
+= \Bra{\Phi_A} \Bra{\Phi_B} H \Ket{\Phi_A} \Ket{\Phi_B} \; \pm \; \Bra{\Phi_B} \Bra{\Phi_A} H \Ket{\Phi_A} \Ket{\Phi_B} \; \pm \; \Bra{\Phi_A} \Bra{\Phi_B} H \Ket{\Phi_B} \Ket{\Phi_A} \; + \; \Bra{\Phi_B} \Bra{\Phi_A} H \Ket{\Phi_B} \Ket{\Phi_A}
+\end{align}
+Es gilt: $\Bra{\Phi_A} \Bra{\Phi_B} H \Ket{\Phi_A} \Ket{\Phi_B} = \Bra{\Phi_A} \Bra{\Phi_B} H \Ket{\Phi_B} \Ket{\Phi_A}$.(???) Warum?\\
+Damit folgt:
+\begin{align}
+\Bra{\Psi_{\pm}} H \Ket{\Psi_{\pm}} = 2 \Bra{\Phi_A} \Bra{\Phi_B} H \Ket{\Phi_A} \Ket{\Phi_B} \; \pm \; 2 \Bra{\Phi_A} \Bra{\Phi_B} H \Ket{\Phi_B} \Ket{\Phi_A} 
+\end{align}
+Nun schauen wir uns die Terme genauer an
+\begin{align}
+1) \; \Bra{\Phi_{AB}} H_1^A + H_2^B + W_{12}^{AB} \Ket{\Phi_{AB}} = E_{1s} \mathbbm{1} + \mathbbm{1} E_{1s} + C_R \\
+2) \; \Bra{\Phi_{AB}} H_1^A + H_2^B + W_{12}^{AB} \Ket{\Phi_{BA}} = E_{1s} S_{AB} S_{BA} + E_{1s} S_{AB} S_{BA} + X_R
+\end{align}
+$C_R$ und $X_R$ kommen vom Wechselwirkungsterm $W_{12}$.\\
+Damit folgt (??? Was? Total unlogisch)
+\begin{align}
+E_{\pm} \left( R \right) = \frac{4 E_{1s} \left(1 \pm |S_{AB}|^2 \right) + 2 C \left( R \right) \pm 2X \left( R \right)}{2 \pm 2 |S_{AB}|^2} \\
+= 2 E_{1s} + \frac{C \left( R \right) + X \left( R \right)}{1 \pm |S_{AB}|^2}
+\end{align}
+
+\subsection{b)}
+i)\\
+$E_+$ ist der Grundzustand. Er hat im Unterschied zu $E_-$ ein Minimum und gebundene Zust\"ande.\\
+\\
+ii)\\
+$\Ket{-} = \Ket{\uparrow} \Ket{\downarrow} - \Ket{\downarrow} \Ket{\uparrow}$ ist ein Spin-Singulett. Die Spinwellenfunktion von $E_+$ muss $\Ket{-}$ sein, da die Gesamtwellenfunktion antisymmetrisch ist.

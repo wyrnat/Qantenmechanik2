@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Fri Jan 08 22:12:54 CET 2016
+markTmpDer=true
+builderNum=0
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=dvi
+tempDir=tmp
+mainTexFile=Blatt9.tex
+outputFile=Blatt9.dvi
+langSpell=en
+markDer=true
+srcDir=

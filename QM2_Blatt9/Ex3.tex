@@ -1,0 +1,60 @@
+\section{Unbenannte Aufgabe}
+
+\begin{align}
+\hat{H} = \frac{|e|}{mc} \vec{S} \vec{B} = \frac{|e|}{mc} \left( B_0 S_z + B_1 cos \left( \omega t \right) S_x + B_1 sin \left( \omega t \right) S_y \right)
+\end{align}
+Die $S_i$ Parameter lassen sich als die Spinmatrizen identifizieren:\\
+$S_i = \frac{\hbar}{2} \sigma_i$.\\
+In den Aufgaben verwenden wir $\omega_0 = \frac{|e|}{2mc}$ und $\gamma = \frac{|e| \hbar}{2mc} B_1$ zur besseren \"Ubersicht.
+
+\subsection{a)}
+
+\begin{align}
+\hat{H} = \hbar \omega_0
+\begin{pmatrix}
+1 & 0 \\ 0 & -1
+\end{pmatrix}
++ \gamma
+\begin{pmatrix}
+0 & e^{i \omega t} \\ e^{-i \omega t} & 0
+\end{pmatrix}
+\end{align}
+ Dieser Hamiltonien l\"asst sich bis auf ein Minuszeichen mit dem von Aufgabe 2 vergleichen. Damit folgt f\"ur die L\"osung:
+ \begin{align}
+ |c_{fi}|^2 = \frac{4x^2}{\hbar^2 \Omega^2} sin^2 \left(\frac{\Omega}{2} t \right)
+ \end{align}
+
+mit $\Omega = \frac{4 \gamma}{\hbar^2} + \left( \omega - 2 \omega_0 \right) ^2$
+
+\subsection{b)}
+
+\begin{align}
+c_{fi} \left( t \right) \approx \delta_{fi} - \frac{i}{h} \int dt_1 \Bra{f} V_I \left( t \right) \Ket{i} + \left( \frac{-i}{h} \right) ^2 \int dt_2 \int dt_1 \Bra{f} V_I \left( t_2 \right) V_I \left( t_1 \right) \Ket{i}
+\end{align}
+Nun bestimmen wir das erste und das zweite Integral
+
+\begin{align}
+\Bra{f} V_I \left( t \right) \Ket{i} = \Bra{f} e^{\frac{i}{\hbar} H_0 t} \gamma 
+\begin{pmatrix}
+0 & e^{-i \omega t} \\ e^{-i \omega t} & 0
+\end{pmatrix}
+e^{-\frac{i}{\hbar} H_0 t} \Ket{i} \\
+= \gamma e^{it \left(\omega - 2 \omega_0 \right)}
+\end{align}
+und
+\begin{align}
+\Bra{f} V_I \left( t_2 \right) V_I \left( t_1 \right) \Ket{i} = \sum_n \Bra{f} V_I \left( t_2 \right)\Ket{n} \Bra{n} V_I \left( t_1 \right) \Ket{i} = 0
+\end{align}
+
+Damit ergibt sich f\"ur $c_{fi}$:
+
+\begin{align}
+c_{fi} = \delta_{fi} - \frac{2\gamma}{\hbar \left(\omega -2\omega_0\right)} e^{\frac{i}{2} \left(\omega -2\omega_0\right) t} sin \left(\frac{\omega -2\omega_0}{2} t \right)\\
+= - \frac{2\gamma}{\hbar \phi} e^{\frac{i}{2} \phi t} sin \left(\frac{\phi}{2} t \right)
+\end{align}
+
+Mit $f = \begin{pmatrix}0&1\end{pmatrix}$ und $i = \begin{pmatrix}1&0\end{pmatrix}$ ergibt sich
+
+\begin{equation}
+|c_{fi} \left(t\right)|^2 = \frac{4 \gamma^2}{\hbar^2 \phi^2} sin^2 \left(\frac{\phi}{2}t \right)
+\end{equation}

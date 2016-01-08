@@ -1,0 +1,25 @@
+\section{Nonlinear oscillator in 1D}
+
+%------------------------------------------------
+
+Ansatz:
+\begin{align}
+\Ket{\Phi} = c_{1} \Ket{\Psi_{0}} + c_{2} \Ket{\Psi_{2}} \\
+\Ket{Psi_{0}} = \left( \frac{\omega}{\pi} \right)^{\frac{1}{4}} e^{-\frac{1}{2}\omega x^2} \\
+\Ket{\Psi_{2}} = \frac{1}{\sqrt{2}} \left( \frac{\omega}{\pi} \right)^{\frac{1}{4}} e^{-\frac{1}{2}\omega x^2} \left( 2\omega x^2 -1 \right)
+\end{align}
+
+Nun bestimmen wir die Matrixelemente $\Bra{\Psi_{i}} H \Ket{\Psi_{j}}$, um danach per Determinanate die Eigenwerte des Hamiltoniens zu ermitteln. Das sind die Energien des Systems mit den beiden Funktionen.
+
+\begin{align}
+\Bra{\Psi_{0}} H \Ket{\Psi_{0}} = \frac{\omega}{2} + \frac{3}{16}  \frac{\lambda}{\omega^2} \\
+\Bra{\Psi_{2}} H \Ket{\Psi_{2}} = \frac{5}{2} \omega + \frac{39}{16} \frac{\lambda}{\omega^2} \\
+\Bra{\Psi_{0}} H \Ket{\Psi_{2}} = \Bra{\Psi_{2}} H \Ket{\Psi_{0}} = \frac{1}{\sqrt{2}} \frac{3}{4} \frac{\lambda}{\omega^2}
+\end{align}
+Damit folgt f\"ur die Energie mit $det \left( H - E\mathbbm{1} \right) $:
+\begin{align}
+E_{0}^{mess} = 0,5596 > E_{0} \\
+E_{2}^{mess} = 3,4904
+\end{align}
+
+

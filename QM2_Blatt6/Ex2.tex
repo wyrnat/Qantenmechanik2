@@ -1,0 +1,54 @@
+\section{Brillouin’s Theorem and the Hartree-Fock Hamiltonian}
+
+\subsection{a)}
+Zu zeigen:
+\begin{equation}
+\Bra{\chi_A} f\left( i \right) \Ket{\chi_B} = \Bra{\chi_A} h \left( i \right) \Ket{\chi_B} + \sum_c \left[\chi_A \chi_B |\chi_C \chi_C \right] - \left[ \chi_A\chi_C | \chi_C\chi_B \right]
+\end{equation}
+Der erste Term der Summe l\"asst sich als $J_C$, der zweite Teil als $K_C$ identifizieren.\\
+(Einfach das Integral ausf\"uhren, wurde nicht vorgerechnet)
+
+\subsection{b)}
+ \begin{align}
+ \Bra{\Psi_0} \sum_{i<j} \hat{O}_{ij} \Ket{\Psi_a^r} = \frac{\left(N-1\right)N}{2} \Bra{\Psi_0} \sum_{i<j} \hat{O}_{12} \Ket{\Psi_a^r} \\
+ = \frac{\left(N-1\right)N}{2} \frac{1}{N!} \sum_{i=1}^{N!} \sum_{j=1}^{N!} \left(-1\right)^{P_i} \left(-1\right)^{P_j} \int dx_1 ... dx_N
+ \end{align}
+ 
+ Nun betrachten wir folgenden Ausdruck:
+ 
+ \begin{align}
+ \hat{P}_i \left[ \chi_a^1 \chi_2^2 ... \chi_N^N \right] \hat{O}_{12} \hat{P}_j \left[ \chi_r^1 \chi_2^2 ... \chi_N^N \right]
+ \end{align}
+ Dieser Ausdruck ist $\neq 0$, wenn $\hat{P}_i = \hat{P}_j$ oder $\hat{P}_i = \hat{P}_j \hat{P}_{12}$. Damit reduziert sich die Doppelsumme auf eine Summe und es ergibt sich:
+ 
+\begin{align}
+\Bra{\Psi_0} \sum_{i<j} \hat{O}_{ij} \Ket{\Psi_a^r} = \frac{\left(N-1\right)N}{2} \frac{1}{N!} \sum_{i=1}^{N!} \left(-1\right)^{P_i} \left(-1\right)^{P_j} \int dx_1 ... dx_N \; P_i \left[...\right] \hat{O}_{12} \left( 1 - P_{12} \right) P_j \left[...\right]
+\end{align}
+
+Damit das Integral $\neq 0$ ist, m\"ussen die Teilchen 1 und 2 in den Zust\"anden $\chi_a$ und $\chi_r$ sein.
+
+\begin{align}
+= \frac{\left( N - 2 \right)!}{2 \left( N-2 \right)} \sum_{n \neq a}^N dx_1 dx_2 \left[\chi_1^1 \chi_n^2 \hat{O}_{12} \left( 1-P_{12} \right) \chi_r^1 \chi_n^2 + \chi_n^1 \chi_a^2 \hat{O}_{12} \left(1-P_{12} \right) \chi_n^1 \chi_r^2 \right]\\
+= \sum_{n \neq a}^N \int dx_1 dx_2 \chi_a \chi_n \hat{O}_{12} \left[ \chi_r \chi_n - \chi_n \chi_r \right] \\
+= \sum_n \left( \left[ \chi_a \chi_r | \chi_n \chi_n \right] - \left[ \chi_a \chi_n | \chi_n \chi_r \right] \right)
+\end{align}
+
+Damit ergibt sich (???)
+
+\begin{align}
+\Bra{\Psi_0} H \Ket{\Psi_a^r} = \Bra{\chi_a} f  \Ket{\chi_r}
+\end{align}
+
+\subsection{c)}
+
+\begin{align}
+E_0 = \Bra{\Psi_0} H \Ket{\Psi_0} \\
+= \sum_a \Bra{\chi_a} h  \Ket{\chi_a} + \frac{1}{2} \sum_{a,b} \left( \left[ \chi_a \chi_a | \chi_b \chi_b \right] - \left[ \chi_a \chi_b | \chi_b \chi_a \right] \right)
+\end{align}
+F\"ur die Summe der partiellen Hamiltoniens gilt
+\begin{align}
+\tilde{E}_0 = \Bra{\Psi_0} \sum f \left( i \right) \Ket{\Psi_0} = \sum_a E_a \\
+= \sum_a \Bra{\chi_a} h  \Ket{\chi_a} + \sum_{a,b} \left( \left[ \chi_a \chi_a | \chi_b \chi_b \right] - \left[ \chi_a \chi_b | \chi_b \chi_a \right] \right)
+\end{align}
+
+Der Unterschied von $\frac{1}{2}$ beim Faktor taucht deshalb auf, weil bei der Summe der Einzelenergien die Wechselwirkungsterme $W_{12}$ und $W_{21}$ nicht "normiert" wurden bzw. es wurde nicht ber\"ucksichtigt, dass sie identisch sind.

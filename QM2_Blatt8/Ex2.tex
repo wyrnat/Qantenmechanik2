@@ -1,0 +1,119 @@
+\section{Strong coupling expansion of the Bose-Hubbard Model}
+
+\begin{equation}
+\tilde{H} = -J \sum_{<i,j>} a_i^{\dagger} a_j + \frac{1}{2} U \sum_i a_i^{\dagger} a_i^{\dagger} a_i a_i
+\end{equation}
+Der erste Term ist der \"Ubergang zwischen 2 Potentialen \textbf{i} und \textbf{j}. Der zweite Term beschreibt den Teilchenzahloperator. Es gilt $\lambda = \frac{J}{U} << 1$. Wir rechnen mit $H = \frac{\tilde{H}}{U}$
+
+\subsection{a)}
+
+\begin{equation}
+H_0 = \frac{1}{2} \sum_i a_i^{\dagger} a_i^{\dagger} a_i a_i = \frac{1}{2} \sum_i \hat{n}_i \left( \hat{n}_i - 1 \right)
+\end{equation}
+
+n-Zust\"ande sind Eigenzust\"ande des Hamiltoniens, mit
+
+\begin{align}
+H_0 \Ket{\vec{n}} = frac{1}{2} \sum_i n_i \left( n_i - 1 \right) \Ket{\vec{n}} = \epsilon \left( \vec{n} \right) \Ket{\vec{n}} \\
+= \left[ frac{1}{2} \sum_i n_i^2 - \frac{N}{2} \right] \Ket{\vec{n}}
+\end{align}
+Mit $\vec{n} = \begin{pmatrix} n_1 & n_2 & n_3 & ... & n_i \end{pmatrix}$. F\"ur die Eigenwerte gilt $ \epsilon \left( \vec{n} \right) < \epsilon \left( \vec{n} -\vec{j} + \vec{i} \right)$. \\
+
+Daraus folgt
+\begin{align}
+\frac{1}{2} \sum_k n_k^2 < \frac{1}{2} \sum_{k \neq i,j} \left( n_k^2 + \left(n_j -1 \right)^2 + \left(n_i -1 \right)^2 \right) \\
+0 < -2 n_j + 1 + 2n_i +1 = 2 \left( 1 + n_i - n_j \right)
+\rightarrow \; n_j - n_i < 1 \; \leftarrow
+\end{align}
+
+Wenn ein Platz leer ist, muss ein benachbarter Platz mit mindestens 2 Atomen belegt sein.
+
+\subsection{b)}
+
+Bestimmung der Energien erster Ordnung mit $\hat{V} = - \frac{J}{4} \sum_{<i,j>} a_i^{\dagger} a_j$
+\begin{equation}
+ E_0^{\left( 1 \right)} = \Bra{\Psi_0^{\left( 0 \right)}} \hat{V} \Ket{\Psi_0^{\left( 0 \right)}} \\
+ = - \frac{J}{4} \sum_{i,j} \Bra{\Psi_0^{\left( 0 \right)}} a_i^{\dagger} a_j \Ket{\Psi_0^{\left( 0 \right)}} = 0
+\end{equation}
+Die Energien erster Ordnung sind 0, da stets gilt: $i \neq j$. Das hei\"st, in erster Ordnung gibt es keine Korrektur zur Energie.
+
+\subsection{c)}
+
+Nun bestimmen wir die Zustandsfunktion der ersten Ordnung der St\"orung.
+
+\begin{align}
+\Ket{\Psi_0^{\left( 1 \right)}} = - P_0 \frac{1}{H_0 - E_0^{\left( 0 \right)}} P_0 \; V\Ket{\Psi_0^{\left( 0 \right)}} \\
+\end{align}
+Nun identifizieren wir die einzelnen Terme
+
+\begin{align}
+\rightarrow E_0^{\left( 0 \right)} = \epsilon \left(1,1,1,1,...,1 \right) = 0 \\
+\rightarrow V\Ket{\Psi_0^{\left( 0 \right)}} = - \frac{J}{4} \sum_{<i,j>} a_i^{\dagger} a_j \Ket{\Psi_0^{\left( 0 \right)}} \\
+= - \frac{J}{4} \sum_{<i,j>} \sqrt{n_j \left( n_i - \delta_{ij} + s \right)} \Ket{\hat{n} - \hat{j} + \hat{i}}
+=^* \frac{J}{4} \sqrt{2} \sum_{<i,j>} \Ket{\hat{n} - \hat{j} + \hat{i}} \\
+\rightarrow P_0 V \Ket{\Psi_0^{\left( 0 \right)}} = V\Ket{\Psi_0^{\left( 0 \right)}}
+\end{align}
+
+(*) Wir wissen, dass der Zustand $\Ket{\Psi_0^{\left( 0 \right)}}$ bedeutet, dass $n_j = n_i = 1$, da in 0. Ordnung jeder Zustand einmal besetzt ist.\\
+ \\
+Nun k\"onnen wir die Terme zusammenfassen
+
+\begin{align}
+\Ket{\Psi_0^{\left( 1 \right)}} = \sqrt{2} \frac{J}{4} P_0 H_0 \sum_{<i,j>} \Ket{\hat{n} - \hat{j} + \hat{i}} \\
+= \sqrt{2} \frac{J}{4} P_0 \sum_{<i,j>} \frac{1}{\epsilon \left[\hat{n} - \hat{j} + \hat{i} \right]} \Ket{\hat{n} - \hat{j} + \hat{i}}
+\end{align}
+Mit
+
+\begin{align}
+\epsilon \left[\hat{n} - \hat{j} + \hat{i} \right] = \epsilon \left[\hat{n} \right] - \frac{1}{2} \left( n_i \left( n_i -1 \right) + n_j \left( n_i -1 \right) \right) + \frac{1}{2} \left( \left( n_i +1 \right) \left( n_i -1 + 1 \right) + \left( n_j -1 \right) \left( n_j -2 \right) \right) \\
+= \epsilon \left[\hat{n} \right] + 1 \\
+= 1
+\end{align}
+ergibt sich f\"ur die erste Ordnung St\"orung
+
+\begin{equation}
+\Ket{\Psi_0^{\left( 1 \right)}} = \sqrt{2} \frac{J}{4} \sum_{<i,j>} \Ket{\hat{n} - \hat{j} + \hat{i}} = -V \Ket{\Psi_0^{\left( 0 \right)}}
+\end{equation}
+
+Die erste Ordnung ber\"ucksichtigt das Hopping, die Bewegung eines Teilchens in das benachbarte Potential.
+
+\subsection{d)}
+
+Nun bestimmen wir die Energie von der zweiten Ordnung St\"orung
+
+\begin{align}
+ E_0^{\left( 2 \right)} \Bra{\Psi_0^{\left( 0 \right)}} V \Ket{\Psi_0^{\left( 1 \right)}}
+ = - \Bra{\Psi_0^{\left( 1 \right)}} \Ket{\Psi_0^{\left( 1 \right)}} \\
+ = -2 \frac{J^2}{U^2} \sum_{<i,j>} 1 = -2 \frac{J^2}{U^2} 2 \left(N+1 \right)
+\end{align}
+
+\subsection{e)}
+
+Zuletzt die Zustandsfunktion zur 2. Ordnung St\"orung
+
+\begin{align}
+\Ket{\Psi_0^{\left( 2 \right)}} = - P_0 \frac{1}{H_0 - E_0^{\left( 0 \right)}} P_0 \; V\Ket{\Psi_0^{\left( 1 \right)}} - \sum_{n=1}^1 E_0^{\left( n \right)} \Ket{\Psi_0^{\left( 2-n \right)}} \\
+= - P_0 \frac{1}{H_0} P_0 \; V\Ket{\Psi_0^{\left( 1 \right)}} \\
+= - P_0 \frac{1}{H_0} P_0 \left[ \sum_{<p,q>} \sqrt{2} \frac{J^2}{U^2} \sum_{<i,j>} a_q^{\dagger} a_p \right] \Ket{\hat{n} - \hat{j} + \hat{i}} \\
+= - \sqrt{2} \frac{J^2}{U^2} P_0 \frac{1}{H_0} P_0 \sum_{<p,q>} \sum_{<i,j>} \sqrt{\left(n_p - \delta_{pj} + \delta_{ip} \right) \left( n_q + 1 - \delta_{jq} + \delta_{iq} \right)} \Ket{\hat{n} - \hat{j} -\hat{p} + \hat{i} +\hat{q}}
+\end{align}
+
+Nun wollen wir die $\delta$-Terme unter der Wurzel reduzieren. Dazu suchen wir qualitativ nach Abh\"angigkeiten:\\
+$j=p$: Zweifache Annihilation gibt es nicht. $\rightarrow$ f\"allt weg. \\
+$j=q$ \& $p=i$: Ergibt den Zustand $\Ket{n}$, mit $P_0 \Ket{n} = 0$. $\rightarrow$ f\"allt weg \\
+
+Mit $n_p = n_q = 1$ folgt:
+
+\begin{equation}
+\Ket{\Psi_0^{\left( 2 \right)}} = \sqrt{2} \frac{J^2}{U^2} P_0 \frac{1}{H_0} \sum_{<p,q>, i \neq p} \sum_{<i,j>, j \neq q} \sqrt{\left(1-\delta_{jp}\right) \left(2+ \delta_{iq}\right)} \Ket{\hat{n} - \hat{j} -\hat{p} + \hat{i} +\hat{q}}
+\end{equation}
+Mit $H_0 = \epsilon \left( \hat{n} - \hat{j} -\hat{p} + \hat{i} +\hat{q} \right)$.\\
+Wir schauen uns nun die m\"oglichen F\"alle an. Nehmen wir an, dass $j \neq p$, dann gibt es zwei M\"oglichleiten, was mit dem Ausdruck unter der Wurzel geschieht:\\
+$i=q$: $\rightarrow \frac{\sqrt{3}}{2}$\\
+$i \neq q$: $\rightarrow \frac{\sqrt{2}}{2}$\\
+Damit l\"asst sich die Funktion auch schreiben als
+
+\begin{equation}
+\Ket{\Psi_0^{\left( 2 \right)}} = \sqrt{2} \frac{J^2}{U^2} \sum \frac{\sqrt{1-\delta_{jp}}}{\sqrt{2+\delta_{iq}}}  \Ket{\hat{j} -\hat{p} + \hat{i} +\hat{q}}
+\end{equation}
+

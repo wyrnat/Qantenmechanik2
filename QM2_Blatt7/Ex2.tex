@@ -1,0 +1,57 @@
+\section{The CC math}
+
+Der \"Ubergangsoperator f\"ur Anregungen ist $T_{\mu} = a_{ru}^{\dagger} a_{bi} a_{ql} ...$
+
+\subsection{a)}
+
+Zu erwarten ist: $T_{\mu}T_{\mu} = 0$\\
+\begin{align}
+T_{\mu}T_{\mu} = \Pi_{j=1}^{m} a_{rn_j}^{\dagger} a_{bq_j} \; \Pi_{i=1}^{m} a_{rn_i}^{\dagger} a_{bq_i} \\
+= \Pi_{j=1}^{m-1} a_{rn_j}^{\dagger} a_{bq_j} \left( a_{rn_m}^{\dagger} a_{bq_m} \right) a_{rn_1}^{\dagger} a_{bq_1} \Pi_{i=2}^{m} ... \\
+= \Pi_{j=1}^{m-1} a_{rn_j}^{\dagger} a_{bq_j} a_{rn_m}^{\dagger} \Pi_{i=1}^{m-1} a_{rn_i}^{\dagger} a_{bq_i} a_{nk_m}^{\dagger} \; a_{bq_m} a_{bq_m} \\
+= \hat{O} a_{bq_m} a_{bq_m} = 0
+\end{align}
+
+\subsection{b)}
+
+Wurde nicht gemacht, zu beweisen ist $\left[ \tau_{\mu} , \tau_{\nu} \right]$
+
+\subsection{c)}
+
+i)
+\begin{align}
+e^{t_{\mu} \tau_{\mu}} = \sum_{n=0}^{\inf} \frac{\left(t_{\mu} \tau_{\mu} \right)^n}{n!} \\
+= 1 \; + \; t_{\mu} \tau_{\mu} \; + \; \tau_{\mu} \tau_{\mu} \sum_{n=2}^{\inf} \frac{\left(t_{\mu} \tau_{\mu} \right)^n}{n!} \\
+= 1 \; + \; t_{\mu} \tau_{\mu}
+\end{align}
+Da das Produkt $\tau_{\mu} \tau_{\mu}$ stets 0 ist.\\
+\\
+ii)
+\begin{equation}
+\Pi_{\mu} \left(1 + t_{\mu} \tau_{\mu} \right) = \Pi_{\mu} e^{t_{\mu} \tau_{\mu}} =^* e^{\sum_{\mu} t_{\mu} \tau_{\mu}} = e^{\hat{T}}
+\end{equation}
+Bei * wird Die Baker-Campell-Haussdorf Relation und das Ergebnis von b) verwendet.
+
+Alles in allem folgt daraus: $\Ket{CC} =  e^{\hat{T}} \Ket{\Psi_0}$
+
+\subsection{d)}
+
+\begin{equation}
+e^{\hat{T}} \Ket{\Psi_0} = \sum_{i=0}^N \hat{C}_i \Ket{\Psi_0}
+\end{equation}
+Die Reihenentwicklung von $e^{\hat{T}}$ lautet
+\begin{equation}
+e^{\hat{T}} = 1 + \hat{T} + \frac{1}{2!}\hat{T}^2 + \frac{1}{3!}\hat{T}^3 + \frac{1}{4!}\hat{T}^4 + ...
+\end{equation}
+T ist nun eine Summe, dessen Terme wir als $T_n$ auffassen [Siehe c)].
+\begin{align}
+T = T_1 + T_2 + T_3 + T_4 + ... \\
+T^2 = T_1^2 + 2T_1T_2 + 2T_1T_3 + T_2^2 + ... \\
+T^3 = T_1^3 + 3T_1^2T_2 + ... \\
+T^4 = T_1^4 + ...
+\end{align}
+Damit folgt (Verstehe ich nicht???)
+\begin{equation}
+e^{\hat{T}} = 1 + T_1 + \left[ T_2 + \frac{1}{2} T_1^2 \right] + \left[ T_3 + T_1T_2 + \frac{1}{6} T_1^3 \right]
++ \left[ T_4 + T_1T_3 + \frac{1}{2} T_1^2T_2 +\frac{1}{24}T_1^4 \right]
+\end{equation}

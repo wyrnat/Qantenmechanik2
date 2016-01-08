@@ -1,0 +1,98 @@
+\section{Delta Potential in 1D}
+
+The Schr\"odinger equation (in atomic units) of an electron moving in one dimension under
+the influence of potential.
+
+
+%------------------------------------------------
+
+\subsection{a)}
+
+\textbf{Calculate the exact ground state energy} $\epsilon_{0}$  \textbf{of the bound state} \\
+\\
+
+
+Zuerst bestimmen wir die Wirkung von $-\delta$ auf $\Psi$ :
+
+\begin{align}
+\lim\limits_{\Delta\to0} \int_{-\Delta}^{\Delta}  \mathrm{d}x
+\left[ - \frac{1}{2} \frac{d^{2}}{dx^{2}} - \delta \left( x \right) \right] \Psi \left( x \right) =
+\lim\limits_{\Delta\to0} \int_{-\Delta}^{\Delta}  \mathrm{d}x \, E \Psi \left( x \right) \\
+\lim\limits_{\Delta\to0}  - \frac{1}{2} \Ket{\Psi^{''}} {|_{-\Delta}}^{\Delta} - \Ket{\Psi} = 0
+\end{align}
+\begin{equation}
+\Ket{\Psi  0^{+} } = \Ket{\Psi  0^{-} }
+\end{equation}
+Daraus folgt. \textit{Diesen Schritt kann ich nicht nachvollziehen}
+\begin{align}
+\frac{d^{2}}{dx^{2}} \Ket{\Psi} = -2E \Ket{\Psi}
+\end{align}
+
+Als Funktion wir angenommen:
+\begin{align}
+\Ket{\Psi} = A e^{\kappa x} + B e^{-\kappa x} , x < 0 \\
+\Ket{\Psi} = C e^{\kappa x} + D e^{-\kappa x} , x > 0
+\end{align}
+
+B $\&$ C sind 0, da sonst die Funktion gegen $\inf$ l\"auft.\\
+
+F\"ur den Limes gegen 0 m\"ussen die Funktionen gleich sein
+\begin{align}
+\lim\limits_{\Delta\to0} A e^{\kappa \Delta} = \lim\limits_{\Delta\to0} D e^{- \kappa \Delta}
+\end{align}
+Daraus folgt \textbf{A=D}. \textit{Nun macht er was komisches, normalerweise wir jetzt ja die Stetigkeit der Ableitung verlangt...}
+\begin{align}
+\lim\limits_{\Delta\to0} A \kappa e^{\kappa \Delta} - \lim\limits_{\Delta\to0} A \left(-\kappa\right) e^{-\kappa \Delta} = 2A \\
+2 \kappa A = 2 A \\
+\end{align}
+Von oben folgt:
+\begin{align}
+|E| = \frac{1}{2} \kappa \\
+E_{0} = - \frac{1}{2}
+\end{align}
+
+
+%------------------------------------------------
+
+\subsection{b)}
+
+\textbf{Use the variation method with the trial function}
+\begin{equation}
+\Ket{\tilde{\Psi}} = N e^{-\alpha x^{2}} , a > 0
+\end{equation}
+\textbf{to show that $-\pi^{-1}$ is an upper bound to the exact ground state energy.}\\
+\textbf{Compare  this with your exact result.}\\
+
+Zuerst normalisieren wir den Ansatz
+\begin{align}
+\Braket{\tilde{\Psi} | \Psi} = 1 = N^2 \sqrt{\frac{\pi}{2\alpha}}
+\end{align}
+Daraus folgt $N = \sqrt[4]{\frac{2\alpha}{\pi}}$. Die Energie wird bestimmt mit
+\begin{align}
+E \left(\alpha\right) = \Bra{\tilde{\Psi}} H \Ket{\tilde{\Psi}} = \int_{-\inf}^{\inf} dx \tilde{\Psi}^* \frac{d^2}{dx^2} \tilde{\Psi} - \int_{-\inf}^{\inf} dx \tilde{\Psi}^* \delta \left( x \right) \tilde{\Psi} \\
+\frac{d^2}{dx^2} \tilde{\Psi} = N \left( -2\alpha e^{-\alpha x^{2}} + 4 \alpha^2 x^2 e^{-\alpha x^{2}} \right)
+\end{align}
+damit k\"onnen wir nun beide Teile bestimmen.\\
+Zuerst der kinetische Teil:
+\begin{align}
+\int_{-\inf}^{\inf} \tilde{\Psi}^* \frac{d^2}{dx^2} \tilde{\Psi} = N^2 \left[ - 2 \alpha \int_{-\inf}^{\inf} dx e^{-\alpha x^{2}} \quad + 4 \alpha^2 \int_{-\inf}^{\inf} dx \quad x^2 e^{-\alpha x^{2}} \right] \\
+= - \sqrt{\frac{2\alpha}{\pi}} \sqrt{\frac{\pi \alpha}{2}} = -\alpha
+\end{align}
+Nun das Potential
+\begin{align}
+\int_{-\inf}^{\inf} dx \tilde{\Psi}^* \delta \left( x \right) \tilde{\Psi} = N^2 |\tilde{\Psi}\left(0\right)|^2 = \sqrt{\frac{2\alpha}{\pi}}
+\end{align}
+Nun haben wir die Energie $E\left(\alpha \right) = \frac{\alpha}{2} - \sqrt{\frac{2\alpha}{\pi}}$ und k\"onnen mit dem Variationsprinzip $\alpha$ bestimmen.
+\begin{align}
+\frac{dE}{d\alpha} = 0  \rightarrow \frac{1}{2} - \frac{1}{2} \sqrt{\frac{2\alpha}{\pi}} = 0 \\
+\alpha = \frac{2}{\pi}
+\end{align}
+Damit haben wir die Grundzustandsenergie f\"ur diese Basis bestimmt mit $E = -\frac{1}{\pi}$ und damit eine Obergrenze f\"ur die wahre Energie abgesch\"atzt.
+
+
+
+
+
+
+
+

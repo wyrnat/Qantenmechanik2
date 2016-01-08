@@ -1,0 +1,52 @@
+\section{The kicked oscillator}
+
+\begin{align}
+H = H_0 + V \left( x,t \right) \\
+V \left( x,t \right) = gx^2 e^{-\frac{t}{\tau}}
+\end{align}
+
+Das Potential ist sowohl raum- als auch zeitabh\"angig. Das System wird aus dem Gelichgweichtszustand gebracht und es gilt zu ermitteln, wie sich das System verh\"alt.
+
+\subsection{a)}
+
+\begin{align}
+\Ket{initial} = \Ket{0} \\
+\Ket{final} = \Ket{n}
+\end{align}
+Der initiale und der finale Zustand werden im folgenden als $\Ket{i}, \Ket{f}$ abgek\"urzt.
+
+\begin{align}
+A_{fi} \left( t \right) = \Braket{f | \Psi \left(t \right)} = \Bra{f} U \left( t, t_0 \right) \Ket{i} \\
+U_I \left(t,t_0 \right) = \mathbbm{1} - \frac{i}{\hbar} \int_{t_0}^t dt' V_I \left(t' \right) U_I  \left(t' \right)
+\approx \mathbbm{1} - \frac{i}{\hbar} \int_{t_0}^t dt' V_I \left(t' \right)
+\end{align}
+Die N\"aherung folgt aus der Entwicklung bis zur ersten Ordnung.
+
+\begin{align}
+A_{n0} \left( t \right) = \delta_{n0} -\frac{i}{\hbar} \int_{t_0}^t dt' \Bra{n} e^{\frac{i}{\hbar} H_0 t'} V \left( t \right) e^{-\frac{i}{\hbar} H_0 t'} \Ket{0}
+\end{align}
+Nun lassen wir die Exponentialfunktionen auf die Zust\"ande wirken. Die Eigenwerte von $H_0$ folgen aus dem harmonischen Oszillator mit $E_n = \hbar \omega \left( n + \frac{1}{2} \right)$
+
+\begin{align}
+A_{n0} \left( t \right) = \delta_{n0} -\frac{i}{\hbar} \int_{t_0}^t dt' e^{\frac{i}{\hbar} \hbar \omega \left( n + \frac{1}{2} \right) t'} e^{\frac{i}{\hbar} \hbar \omega \left( n + \frac{1}{2} \right) t'} \Bra{n} V \Ket{0} \\
+= \delta_{n0} -\frac{i}{\hbar} g \int_{t_0}^t dt' e^{-\frac{t'}{\tau}} e^{i \omega n t'} \Bra{n} x^2 \Ket{0}
+\end{align}
+
+Der zweite Term des Integrals ist nicht mehr zeitabh\"angig. Wir berechnen nun die beiden Terme getrennt
+
+\begin{align}
+1) \; \Bra{n} x^2 \Ket{0} = \frac{\hbar}{2m \omega} \Bra{n} \left(a + a^{\dagger} \right) \left(a + a^{\dagger} \right) \Ket{0} = \frac{\hbar}{2m \omega} \left( \sqrt{2} \delta_{n2} + \delta_{n0} \right) \\
+2) \; \int_{t_0}^t dt' e^{\frac{i}{\hbar} \hbar \omega \left( n + \frac{1}{2} \right) t'} e^{\frac{i}{\hbar} \hbar \omega \left( n + \frac{1}{2} \right) t'} = -\frac{\tau}{1-i \omega n \tau} \left( e^{- \frac{t}{\tau}} \left(1-i\omega n \tau \right) \right)
+\end{align}
+
+Damit folgt f\"ur $A_{n0}$
+
+\begin{equation}
+A_{n0} = \delta_{n0} - \frac{ig}{2m \omega} \left( \sqrt{2} \delta_{n2} + \delta_{n0} \right) \frac{\tau}{1-i \omega n \tau} \left( e^{- \frac{t}{\tau}} \left(1-i\omega n \tau \right) \right)
+\end{equation}
+
+\subsection{b)}
+ \begin{align}
+ A_{n0}^{\infty} = \lim\limits_{t \rightarrow \infty} A_{n0} \left( t \right) = \delta_{n0} - \frac{ig}{2m \omega} \left( \sqrt{2} \delta_{n2} + \delta_{n0} \right) \frac{\tau}{1-i \omega n \tau} \\
+ A_{20}^{\infty} = - \frac{ig}{2m \omega} \sqrt{2} \frac{\tau}{1-i \omega 2 \tau}
+ \end{align}

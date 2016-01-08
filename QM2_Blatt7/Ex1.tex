@@ -1,0 +1,50 @@
+\section{The CI Approach}
+
+CI steht f\"ur Configuration Interaction. Im folgenden wird folgende Notation benutzt.
+\begin{equation}
+\Ket{\Psi_a^r} = a_r^{\dagger} a_a \Ket{\Psi_0}
+\end{equation}
+beschreibt die Anregung des besetzten Zustandes a nach r.\\
+CI ist die Summe aller m\"oglichen \"Uberg\"ange:
+\begin{equation}
+\Ket{CI} = \Ket{\Psi_0} + \sum_{a,r} c_a^r \Ket{\Psi_a^r} \; + \; \sum_{a,b:a<b} \sum_{r,s:r<s} c_{ab}^{rs} \Ket{\Psi_{ab}^{rs}} \; + \; ...
+\end{equation}
+
+\subsection{a)}
+\begin{equation}
+\Ket{CI} = \Ket{\Psi_0} \; + \; \sum_{a=1}^3 \sum_{r=4}^{\inf} c_a^r \Ket{\Psi_a^r} \\
+= \Ket{\Psi_0} \; + \; \sum_{r=4}^{\inf} a_r^{\dagger} \left[ c_1^r a_1 + c_2^r a_2 + c_3^r a_3 \right] \Ket{\Psi_0}
+\end{equation}
+
+Damit wurde die Summe \"uber die 3 m\"oglichen Orte f\"ur den Vernichtungsoperator ausgef\"uhrt. Schreibt man den Zustand detailliert hin, ergibt sich:
+
+\begin{equation}
+\Ket{CI} = \Ket{1,1,1,0,...} \; + \; \sum_{r=4}^{\inf} a_r^{\dagger} \left[ c_1^r \Ket{0,1,1,0,...} \textbf{-} c_2^r \Ket{1,0,1,0,...} + c_3^r \Ket{1,1,0,0,...} \right]
+\end{equation}
+
+Das Minuszeichen folgt aus der Phase (?)
+
+\subsection{b)}
+Annahme:
+\begin{equation}
+H = \sum_{i,n} h_{in} a_i^{\dagger}a_n \; + \; \frac{1}{2} \sum_{i,j,q,h} W_{ijqh} a_i^{\dagger} a_j^{\dagger} a_h a_q
+\end{equation}
+Nun werden alle Matrixelemente Null, welche sich um mehr als 2 Partikel unterscheiden, das hei\"st, einen Abstand von der Diagonalen gr\"o\"ser als 1 haben.
+
+\subsection{c)}
+Das Brillioun-Theorem besagt: $\Bra{\Psi_0} H \Ket{\Psi_a^r} = 0$. \\
+Wenn diese Single-Partikel-Basis nun eine Hartree-Fock Basis ist, womit gilt, $f \Ket{\Xi_a} = \epsilon_a \Ket{\Xi_a}$, dann l\"asst sich die Basis schreiben als
+\begin{equation}
+\Ket{\Psi} = \Ket{\Psi_0} \; + \; \sum_{a=1}^N \sum_{r=N+1}^{\inf} c_a^r \Ket{\Psi_a^r}
+\end{equation}
+Nun betrachten wir den Schr\"odinger-Gleichung, um die Energie (Grundzustand) zu bestimmen
+\begin{align}
+0 = \Bra{\Psi_0} H-E \Ket{\Psi} = \Bra{\Psi_0} H-E \left[ \Ket{\Psi_0} \; + \; \sum_{a=1}^N \sum_{r=N+1}^{\inf} c_a^r \Ket{\Psi_a^r} \right] \\
+= \left(E-E_0 \right) + \sum_{a=1}^N \sum_{r=N+1}^{\inf} \Bra{\Psi_0} H \Ket{\Psi_a^r} - E \Braket{\Psi_0 | \Psi_a^r} \\
+= E - E_0
+\end{align}
+Wegen der Brillouin-Gleichung und der Orthogonalit\"at fallen die Summenterme weg und es wird gezeigt, dass die Ber\"ucksichtigung der m\"oglichen Anregung eines einzelnen Teilchens nicht die Genauigkeit der Energie verbessert
+
+\subsection{d)}
+
+Wurde nicht vorgerechnet, muss noch gemacht werden

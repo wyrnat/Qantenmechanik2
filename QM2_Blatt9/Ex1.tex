@@ -1,0 +1,108 @@
+\section{Dynamics of a driven two-level system}
+
+\begin{align}
+H \left( t \right)=
+\begin{pmatrix}
+E_1 & 0 \\ 0 & E_2
+\end{pmatrix}
++
+\begin{pmatrix}
+0 & \gamma e^{i \omega t} \\ \gamma e^{-i \omega t} & 0
+\end{pmatrix}
+\end{align}
+Dieser zeitabh\"angige Hamiltonien mit kinetischem Term $H_0$ und Austauschterm $V_{12}$ beschreibt ein 2-Levelsystem.
+
+\subsection{a)}
+
+Die Wellenfunktion wird als Fockzustand angesetzt
+
+\begin{align}
+\Ket{\Psi} = \sum_n c_n \Ket{n} = c_1 \Ket{1} + c_2 \Ket{2}
+\end{align}
+
+Im \textbf{Interaction picture} wird eine Wellenfunktion beschrieben als $\Ket{Psi_I} = e^{\frac{i}{\hbar}H_0 t} \Ket{\Psi_s}$.\\
+Nun bringen wir den Hamiltonien in das  \textbf{Interaction picture}.
+
+\begin{align}
+H_I = e^{\frac{i}{\hbar}H_0 t} H e^{-\frac{i}{\hbar}H_0 t} \\
+= H_0 + V_I
+\end{align}
+
+Da $H_0$ mit dem Exponentialterm kommutiert, ist er in beiden Methoden identisch.\\
+Nun benutzen wir die zeitabh\"angige Schr\"odinger-Gleichung, um die Besetzungswahrscheinlichkeiten zu ermitteln. Daf\"ur wird von der linken Seite ein $\Bra{n}$ 
+
+\begin{align}
+i \hbar \partial_t c_n = \sum_m \Bra{n} V_I \Ket{m} c_m
+\end{align}
+Bestimmung der Terme
+\begin{align}
+\Bra{1} V_I \Ket{2} = 
+\begin{pmatrix}
+1 & 0
+\end{pmatrix}
+e^{\frac{i}{\hbar}H_0 t}
+\begin{pmatrix}
+0 & \gamma e^{i \omega t} \\ \gamma e^{-i \omega t} & 0
+\end{pmatrix}
+e^{-\frac{i}{\hbar}H_0 t}
+\begin{pmatrix}
+0 \\ 1
+\end{pmatrix}
+\\
+= e^{\frac{i}{\hbar}E_1 t} e^{-\frac{i}{\hbar}E_2 t}
+\begin{pmatrix}
+1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+\gamma e^{-i \omega t} \\ 0
+\end{pmatrix}
+\\
+= \gamma e^{-i \omega t} e^{\frac{i}{\hbar}\left(E_1-E_2\right) t}
+\end{align}
+Selbiges gilt f\"ur $\Bra{2} V_I \Ket{1}$, aber mit Minuszeichen in den Exponenten der e-Funktion. F\"ur $\Bra{1} V_I \Ket{1}$ und $\Bra{2} V_I \Ket{2}$ ergibt sich aufgrund einer reinen Off-Diagonal-Matrix \textbf{0}.\\
+Damit erhalten wir zwei Gleichungen f\"ur die Besetzungswahrscheinlichkeiten:
+
+\begin{align}
+i \hbar \partial_t c_1 = \gamma e^{i \phi t} c_2 \\
+i \hbar \partial_t c_2 = \gamma e^{-i \phi t} c_1
+\end{align}
+Mit $\phi = \omega - \frac{E2-E1}{\hbar}$. Nun entkoppeln wir die Gleichungen, dazu wird die Ableitung der Gleichung zur Hilfe genommen
+
+\begin{align}
+i \hbar \partial_t^2 c_1 = \gamma e^{i \phi t} \partial_t c_2 + i \phi \gamma e^{i \phi t}  c_2 \\
+= \gamma e^{i \phi t} \left( i \phi \frac{i \hbar \partial_t c_1}{\gamma e^{i \phi t}} + \frac{\gamma e^{-i \phi t} c_1}{i \hbar} \right) \\
+= - \hbar \phi \partial_t c_1 - \frac{i \gamma^2}{\hbar} c_1
+\end{align}
+Selbiges Verfahren f\"ur $c_2$. Damit ergeben sich zwei separierte Differentialgleichungen
+
+\begin{align}
+\partial_t^2 c_1 = i \phi \partial_t c_1 - \frac{\gamma^2}{\hbar^2} c_1 \\
+\partial_t^2 c_1 = -i \phi \partial_t c_1 - \frac{\gamma^2}{\hbar^2} c_1
+\end{align}
+Wir w\"ahlen einen Exponentialansatz $e^{i \Gamma t}$ und erhalten (f\"ur $c_1$)
+\begin{equation}
+\Gamma_1 = \frac{\phi}{2} \pm \frac{1}{2} \sqrt{\frac{4 \gamma^2}{\hbar^2} + \phi^2}
+\end{equation}
+mit den Anfangsbedingungen
+\begin{align}
+c_1 \left( 0 \right) = 1 \\
+c_2 \left( 0 \right) = 0 \\
+\dot{c}_1 \left( 0 \right) = 0 \\
+\dot{c}_2 \left( 0 \right) = \frac{\gamma}{i \hbar} \\
+\end{align}
+Der Term unter der Wurzel wird nun als $\Omega$ bezeichnet.\\
+Damit folgt f\"ur die Wahrscheinlichkeiten
+
+\begin{align}
+c_1 \left( t \right) = \frac{e^{i \frac{\theta}{2}t}}{\Omega} \left[ \Omega cos \left( \frac{\Omega}{2} t \right) - \phi i sin \left( \frac{\Omega}{2}t \right) \right] \\
+|c_1|^2 = 1 - \frac{4 \gamma^2}{\hbar^2 \Omega^2} sin^2 \left( \frac{\Omega}{2} t \right) \\
+|c_2|^2 = \frac{4 \gamma^2}{\hbar^2 \Omega^2} sin^2 \left( \frac{\Omega}{2} t \right) \\
+\end{align}
+
+\subsection{b)}
+
+\begin{align}
+max \left( |c_2|^2 \right) = \frac{4 \gamma^2}{\hbar^2 \Omega^2} \\
+= \frac{\gamma}{\gamma + \frac{\hbar^2 \phi^2}{4}} \leq 1
+\end{align}
+Die Besetzungswahrscheinlichkeiten oszillieren um $180^{\circ}$ phasenverschoben. Wenn $\phi = 0$, dann ist es m\"oglich, das jeweils ein Niveau komplett entv\"olkert ist. Diese \"Anderung der Besetzung nennt man auch \textbf{Rabi-Oszillation}.

@@ -1,0 +1,45 @@
+\section*{Kurze Einf\"uhrung in die St\"orungstheorie}
+
+Wir kennen die ungest\"orte L\"osung des Hamiltoniens und wollen nun den gesamten Hamiltonien l\"osen.
+
+\begin{equation}
+\hat{H} = \hat{H}_0 + \lambda V \; \; \; \left( \lambda << 1\right)
+\end{equation}
+
+Als Ansatz w\"ahlen wir
+
+\begin{align}
+\Ket{\Psi} = \sum_{n=0}^{\infty} \lambda^n \Ket{\Psi^{\left( n \right)}} \\
+E = \sum_{n=0}^{\infty} E^{\left( n \right)} \lambda^n
+\end{align}
+
+Womit auch die Energie als Reihe dargestellt werden kann. Nun stellen wir den Hamiltonien $H \Ket{\Psi} = E \Ket{\Psi}$  dieser Reihe auf. Dadurch l\"asst sich folgendes machen. Zuerst kann man die ungest\"orte L\"osung aus der Gleichung ziehen, da man diese kennt. Danach wird die restliche Gleichung nach Termen gleicher $\lambda$-Produkte sortiert:
+
+\begin{align}
+\left(\lambda^0 \right): \; \; H_0 \Ket{\Psi^{\left( 0 \right)}} = E^{\left( 0 \right)} \Ket{\Psi^{\left( 0 \right)}} \\
+\left(\lambda^1 \right): \; \; H_0 \Ket{\Psi^{\left( 1 \right)}} + V \Ket{\Psi^{\left( 0 \right)}} = E^{\left( 0 \right)} \Ket{\Psi^{\left( 1 \right)}} + E^{\left( 1 \right)} \Ket{\Psi^{\left( 0 \right)}}
+\end{align}
+
+\section{Schr\"odinger Pertubation Theory}
+
+\begin{equation}
+\Ket{\Psi_i^{\left( n \right)}} = \sum_{j=1}^{\infty} \Braket{\Psi_j^{\left( 0 \right)} | \Psi_i} \Ket{\Psi_j^{\left( 0 \right)}}
+\end{equation}
+Einsetzen in die vorgegebene Gleichung
+
+\begin{align}
+P_i \frac{1}{H_0 - E_i^{\left( 0 \right)}} P_i = \left[ 1 - \Ket{\Psi_i^{\left( 0 \right)}} \Bra{\Psi_i^{\left( 0 \right)}} \right] \frac{1}{H_0 - E_i^{\left( 0 \right)}} \left[ 1 - \Ket{\Psi_i^{\left( 0 \right)}} \Bra{\Psi_i^{\left( 0 \right)}} \right] \\
+= \left[ ..."... \right] \; \sum_n \frac{1}{E_n^{\left( 0 \right)} - E_i^{\left( 0 \right)}} \Ket{\Psi_n^{\left( 0 \right)}} \Bra{\Psi_n^{\left( 0 \right)}} \; \left[ ..."... \right] \\
+= \sum_{n \neq i} \frac{1}{E_n^{\left( 0 \right)} - E_i^{\left( 0 \right)}} \Ket{\Psi_n^{\left( 0 \right)}} \Bra{\Psi_n^{\left( 0 \right)}}
+\end{align}
+
+Mit $i \neq j$ folgt:
+
+\begin{align}
+\Braket{\Psi_j^{\left( 0 \right)} | \Psi_i^{\left( n \right)}} = - \frac{1}{E_j^{\left( 0 \right)} - E_i^{\left( 0 \right)}} \Bra{\Psi_j^{\left( 0 \right)}} \left[ V \Ket{\Psi_i^{\left( n-1 \right)}} - \sum_{h=1}^{n-1} E_i^{\left( n \right)} \Ket{\Psi_i^{\left( n-h \right)}} \right]
+\end{align}
+Und erhalten letztendlich die Zust\"ande
+
+\begin{equation}
+\Ket{\Psi_i^{\left( n \right)}} = \sum_{j \neq i} \frac{1}{E_j^{\left( 0 \right)} - E_i^{\left( 0 \right)}} \left[ E_i^{\left( n \right)} - \sum_{h=1}^{n-1} E_i^{\left( n \right)} \Braket{\Psi_j^{\left( 0 \right)}|\Psi_i^{\left( n-h \right)}} \right]
+\end{equation}

@@ -1,0 +1,40 @@
+\section{Polarizability of the hydrogen atom}
+
+\subsection{a)}
+Wir nutzen den Ansatz $ \Ket{Phi} = c_1 \Ket{1s} + c_2 \Ket{2p_z} $ und
+und die Eigenwerte von $H_0 \Ket{1s}$ und  $H_0 \Ket{2p_z}$ sind bekannt.\\
+nun werden alle Matrixelemente von $ \hat{H} = H_0 + Fr \cos{\mu}$ bestimmt. Dabei k\"onnen die Teiloperatoren einzeln behandelt werden. \\
+Es ergibt sich
+\begin{align}
+\Bra{1s} H_0 \Ket{1s} = -\frac{1}{2} \\
+\Bra{2p_z} H_0 \Ket{2p_z} = -\frac{1}{8}
+\end{align}
+
+Die off-diagonal-Elemente sind null, da beide Zust\"ande mit $H_0$ kommutieren.\\
+
+F\"ur den periodischen Teil gehen wir in Polardarstellung mit
+\begin{align}
+\Bra{1s} Fr \cos{\theta} \Ket{1s} = \frac{F}{\pi} \int_{0}^{2\pi} \int_0^{\pi} d\phi d\theta \cos{\theta} \sin{theta} \int r^3 e^{-2r} dr \\
+\\Bra{2p_z} Fr \cos{\theta} \Ket{2p_z} = 0
+\end{align}
+Nur die off-diagonal-Elemente sind nicht null, da hier nicht \"uber eine asymmetrische Funktion integriert wird.
+\begin{align}
+\Bra{1s} Fr \cos{\mu} \Ket{2p_z} = \frac{2^{\frac{15}{2}}}{3^5} F = \Bra{2p_z} Fr \cos{\mu} \Ket{1s}
+\end{align}
+Die Eigenwerte ergeben sich dann zu
+\begin{align}
+E_{\frac{+}{-}} = -\frac{5}{16} \frac{+}{-} \frac{3}{16} \sqrt{1+\frac{2^{23}}{3^{12}} F^2}
+\end{align}
+Somit ist $E_-$ die obere Grenz f\"ur $E_0$.
+
+\subsection{b)}
+Aus der L\"osung von \textbf{a)} n\"ahern wir die Wurzel und erhalten
+\begin{align}
+E_{\frac{+}{-}} = -\frac{5}{16} \frac{+}{-} \frac{3}{16} \left( 1 + \frac{2^{22}}{3^{12}} F^2 \right)
+\end{align}
+
+F\"ur $E_-$ ergibt sich
+\begin{align}
+E_- = \frac{1}{2} - \frac{1}{2} \left( \frac{2^{19}}{3^{11}} \right) F^2 \\
+\alpha = \frac{2^{19}}{3^{11}} \approx 296
+\end{align}

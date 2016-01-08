@@ -1,0 +1,30 @@
+\section{Bound state in 1D}
+
+\subsection{a)}
+
+Testfunktion: $\Ket{\Psi} = N e^{-\alpha x^2}$ mit a>0 \\
+
+Der Hamilton besteht aus $\hat{H} = \hat{H}_0 + \hat{V}$.\\
+Nun bestimmen wir die Energie.
+
+\begin{align}
+E_\alpha = \Bra{\Psi} \hat{H} \Ket{\Psi} = \Bra{\Psi} \hat{H}_0 \Ket{\Psi} + \Bra{\Psi} \hat{V} \Ket{\Psi} \\
+= \frac{\alpha}{2} + N^2 \int  \mathrm{d}x e^{-2\alpha x^2} V\left(x \right)
+\end{align}
+
+Nun nutzen wir das Variationsprinzip mit $\frac{dE_{\alpha}}{d\alpha}  != 0 $.\\
+Es ist darauf zu achten, dass N von $\alpha$ abh\"angt mit $N^2 = \sqrt{\frac{2\alpha}{\pi}}$.
+
+\begin{align}
+\frac{dE_{\alpha}}{d\alpha} = \frac{1}{2} + N^2 \int  \mathrm{d}x e^{-2\alpha x^2} \left(-2x^2 \right) V\left(x \right) \; + \sqrt{\frac{1}{2 \pi \alpha}} \int  \mathrm{d}x e^{-2\alpha x^2} V\left(x \right) \\
+0 = \frac{1}{2} + \int  \mathrm{d}x e^{-2\alpha x^2} V\left(x \right) \left[ -\sqrt{\frac{2\alpha}{\pi}}2x^2 + \sqrt{\frac{1}{2\pi \alpha}} \right] \\
+0 = \frac{1}{2} + N^2 \int  \mathrm{d}x e^{-2\alpha x^2} V\left(x \right) \left[-2x^2 + \sqrt{\frac{1}{4\alpha^2}} \right]
+\end{align}
+Diese Gleichung gilt f\"ur das optimale $\alpha$. Zur Kennzeichung bei der Bestimmung der minimalen Energie nutzen wir deshalb $\tilde{\alpha}$. Zur Vereinfachung multiplizieren wir die Gleichung mit .$\tilde{\alpha}$.
+\begin{align}
+\frac{\tilde{\alpha}}{2} = N^2 \int  \mathrm{d}x e^{-2\tilde{\alpha} x^2} V\left(x \right) \left[2x^2 \tilde{\alpha} - \frac{1}{2} \right]
+\end{align}
+Der Wert f\"ur $\frac{\tilde{\alpha}}{2}$ wird nun eingesetzt in $E_{\alpha}$ und es ergibt
+\begin{align}
+E_{\alpha} = N^2 \int  \mathrm{d}x e^{-2\tilde{\alpha} x^2} V\left(x \right) \left[2x^2 + \frac{1}{2} \right]
+\end{align}

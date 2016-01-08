@@ -1,0 +1,20 @@
+\section{Electron affinity and Koopman’s Theorem}
+
+\begin{align}
+E_0^{N+1} = \Bra{\Psi_0^{N+1}} H \Ket{\Psi_0^{N+1}} \\
+= \sum \Bra{\chi_a} h \Ket{\chi_a} + \frac{1}{2} \sum_{a,b}^{N+1} \left( \left[ \chi_a \chi_a | \chi_b \chi_b \right] - \left[ \chi_a \chi_b | \chi_b \chi_a \right] \right) \\
+= \sum \Bra{\chi_a} h \Ket{\chi_a} + \frac{1}{2} \Bra{\chi_{N+1}} h \left( N+1 \right) \Ket{\chi_{N+1}} + \frac{1}{2} \left( \sum_{a=1}^N \sum_{b=1}^{N+1} W_{ab} \right) + \frac{1}{2} \left( \sum_{b=1}^{N+1} W_{N+1,b} \right) \\
+= ---"--- + \frac{1}{2} \left( \sum_{a=1}^N \sum_{b=1}^{N} W_{ab} \right) + \frac{1}{2} \left( \sum_{b=1}^{N+1} W_{N+1,b} \right) + \frac{1}{2} \left( \sum_{a=1}^{N+1} W_{a,N+1} \right) \\
+\approx E_0^N +  \Bra{\chi_{N+1}} h \left( N+1 \right) + \frac{1}{2} \left( \sum_{b=1}^{N+1} W_{N+1,b} \right) \\
+= E_0^N + \epsilon_{r_{N+1}}
+\end{align}
+
+Der Unterschied der Energie f\"ur ein Elektron mehr betr\"agt somit:
+
+\begin{align}
+E_0^N - E_0^{N+1} = - \epsilon_r \\
+\rightarrow \epsilon_r < 0 \\
+\rightarrow E_0^N > E_0^{N+1}
+\end{align}
+
+Das macht das System zu einem Elektronenakzeptor, da ein zus\"atzliches Elektron die Energie absenkt.
