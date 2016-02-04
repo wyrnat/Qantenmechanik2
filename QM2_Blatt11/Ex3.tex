@@ -1,0 +1,88 @@
+\section{Sperical Bessel functions I}
+
+\subsection{a)}
+
+Sph\"arische Koordinaten: $\left(r, \theta, \phi\right)$
+
+\begin{align}
+\Delta = \Delta_r + \frac{1}{r^2} \Delta_{\theta,\phi} \\
+= \partial_r^2 + \frac{2}{r} \delta_r + \frac{1}{r^3} 
+\left[\frac{1}{\sin^2{\theta}}\partial_{\theta}^2 +
+\frac{\cos{\theta}}{\sin{\theta}} \partial_{\theta} +
+\frac{1}{\sin^2{\theta}}\partial_{\phi}^2 \right]
+\end{align}
+
+\subsection{b)}
+
+\begin{align}
+\Psi \left(r, \theta, \phi\right) = f \left(r\right) Y_l^m \left(\theta,
+\phi\right) \\
+\Delta \Psi = \left[\Delta_r + \frac{1}{r^2} \Delta_{\theta,\phi}\right] f \left(r\right) Y_l^m \left(\theta,
+\phi\right) \\
+= Y_l^m \left(\theta,\phi\right) \left[\Delta_r - \frac{1}{r} \left(l+1\right) l
+\right] f \left(r\right) \\
+= E \Psi \frac{-2M}{\hbar^2}
+\end{align}
+
+Nun zeigen wir, dass $f\left(r\right)$ die Bessel-Gleichung erf\"ullt
+
+\begin{align}
+\left[ \frac{-2ME}{\hbar^2} + \partial_r^2 + \frac{2}{r} \delta_r -
+\frac{l \left(l+1\right)}{r^2} \right] f \left(r\right) = 0
+\end{align}
+
+mit $k = \sqrt{\frac{2ME}{\hbar^2}}$ und $\xi = kr$ und damit $\partial_r = k
+\partial_{\chi}$ bekommen wir
+
+\begin{align}
+\left[k^2 + k^2 \partial_{\chi}^2 + 2 \frac{k^2}{\chi} \partial_{\chi} -
+\frac{l \left(l+1\right)k^2}{\chi^2} \right] f \left(\chi\right) = 0 \\
+\left[ \chi^2 f\left(\chi\right) \chi^2 f''\left(\chi\right) + 2\chi
+f'\left(\chi\right) - l \left(l+1\right)f\left(\chi\right) \right] = 0
+\end{align}
+
+\subsection{c)}
+
+\begin{align}
+j_l \left(\xi\right) = \frac{\xi^l}{2^{l+1}l!} \int_{-1}^1 ds \; e^{i\xi s}
+\left(1-s^2\right)^l \\
+= \frac{1}{2^{l+1}l!} U_l \left(\xi\right)
+\end{align}
+
+Nun bestimmen wir $U'_l$ und $U''_l$ f\"ur die Bessel-Gleichung
+
+\begin{align}
+U'_l \left(\xi\right) = \frac{l}{\xi} U_l \left(\xi\right) + \xi^l \int_{-1}^1
+ds \; \left(is\right) e^{i\xi s} \left(1-s^2\right)^l \\
+U''_l \left(\xi\right) = \frac{l}{\xi^2} U_l \left(\xi\right) + \frac{l}{\xi}
+U'_l \left(\xi\right) + \frac{l\xi^l}{\xi} \int_{-1}^1 ds \; \left(is\right)
+e^{i\xi s} \left(1-s^2\right)^l + \xi^l \int_{-1}^1 ds \; \left(is\right)^2
+e^{i\xi s} \left(1-s^2\right)^l
+\end{align}
+
+Das erste Integral von $U''_l$ l\"asst sich ausdr\"ucken als $\frac{l}{\xi}
+\left(U'_l - \frac{l}{\xi} U_l \right) $.\\
+Nun werden die Terme in die Besselfunktion eingesetzt
+
+\begin{align}
+\xi^2 U''_l + 2 \xi U'_l + \left(\xi^2-l \left(l+1\right) \right) U_l \\
+= -2l\left(l+1\right) U_l + 2\left(l+1\right) \xi U'_l + \xi^l \xi^2 \int_{-1}^1
+ds \left[ \left(is\right)^2
+e^{i\xi s} \left(1-s^2\right)^l + \xi^2 U_l \right]
+\end{align}
+
+Nun ist noch das Integral zu l\"osen
+
+\begin{align}
+I = \xi^l \xi^2 \left[ \frac{e^i\xi s}{i\xi} \left(1-s^2\right)^{l+1} \right]
+\bigg|_{s=-1}^{s=1} - \int ds \; \frac{e^{i\xi s}}{i\xi} \left(l+1\right)
+\left(1-s^2\right)^l \left(-2s\right) \\
+= -2 \left(l+1\right) \xi^l \xi \int_{-1}^{1} ds \; is e^{i\xi s}
+\left(1-s^2\right)^l \\
+= -2 \left(l+1\right) \xi \left[U'_l -\frac{l}{\xi} U_l \right]
+\end{align}
+
+\subsection{d)}
+
+\textbf{i)}
+

@@ -1,0 +1,35 @@
+\section{Canonical Hartree-Fock equations}
+
+\begin{equation}
+\Ket{\chi_a'} = \sum_b U_{ab} \Ket{\chi_b}
+\end{equation}
+
+\subsection{a)}
+
+\begin{equation}
+\Ket{\Psi'} = \frac{1}{\sqrt{N!}} 
+\begin{vmatrix}
+\Ket{\chi_1'}^1 & ... & \Ket{\chi_1'}^N \\
+... &  & ... \\
+\Ket{\chi_N'}^1 & ... & \Ket{\chi_N'}^N
+\end{vmatrix} \\
+= \frac{1}{\sqrt{N!}}
+\begin{vmatrix}
+\begin{pmatrix}
+U_{11} & ... & U_{1N} \\
+... &  & ... \\
+U_{N1} & ... & U_{NN}
+\end{pmatrix}
+&
+\begin{pmatrix}
+\Ket{\chi_1}^1 & ... & \Ket{\chi_1}^N \\
+... &  & ... \\
+\Ket{\chi_N}^1 & ... & \Ket{\chi_N}^N
+\end{pmatrix}
+\end{vmatrix}
+\end{equation}
+Oder auch: $\Ket{\Psi '} = |U|  |\Psi|$\\
+Mit $1 = det \left( \mathbbm{1} \right) = det \left(U U^{\dagger} \right)$ und weil U hermitisch ist, gilt:\\
+$|det \left( U \right) |^2$.\\
+\\
+Keine Ahnung, was er hier macht, die Aufgabe ist es aber nicht

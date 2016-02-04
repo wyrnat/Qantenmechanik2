@@ -1,0 +1,53 @@
+\section{Dirac $\delta$ identities}
+
+\subsection{a)}
+
+\begin{align}
+\delta_{\epsilon} \left(x\right) := \frac{1}{\pi} Im \left(
+\frac{1}{x+i\epsilon} \right) \\
+= - \frac{1}{2\pi i} \left[ \frac{1}{x+ i\epsilon} - \frac{1}{x- i\epsilon}
+\right] \\
+= - \frac{1}{2 \pi i} \left[ - \frac{2 i \epsilon}{x^2 + \epsilon^2} \right] \\
+= \frac{1}{\pi} \frac{\epsilon}{x^2 + \epsilon^2}
+\end{align}
+
+\subsection{b)}
+
+\begin{align}
+\delta \left( F\left(x\right) \right) = \sum_j \frac{1}{|F' \left(x_j\right)|}
+\delta \left(x-x_j\right)
+\end{align}
+Mit $F\left(x_j\right)=0$ und $F'\left(x_j\right) \neq 0$. Das zu l\"osende
+Integral behinhaltet nun die Faltung der $\delta$-Funktion mit einer
+testfunktion, wir wollen die Funktion am Punkt $x_0$ auswerten.
+
+\begin{align}
+I = \int_{x_0-\epsilon}^{x_0+\epsilon} dx \; \delta \left( F\left(x\right)
+\right) \Phi \left(x\right) \\
+= \int_{F\left(x_0-\epsilon\right)}^{F\left(x_0+\epsilon\right)} dx \;
+\frac{1}{|F' \left(x\left(y\right) \right)|} \delta \left(x\right) \Phi
+\left(x\left(y\right) \right)
+\end{align}
+Nun nehmen wir an: $y = F \left(x\right)$.
+Wir invertieren den Ausdruck nach $x\left(y\right)$ mit $x\left(0\right)=x_0$
+und k\"onnen zwischen 2 F\"allen unterscheiden:\\
+\\
+\textbf{1. Fall}: $F'\left(x_0\right) > 0$
+\begin{align}
+\Rightarrow F \left(x_0 + \epsilon \right) > F \left(x_0 - \epsilon \right) \\
+I = frac{1}{F' \left(x_0 \right)} \Phi \left(x_0\right) = frac{1}{|F' \left(x_0
+\right)|} \Phi \left(x_0\right)
+\end{align}
+
+\textbf{2. Fall}: $F'\left(x_0\right) < 0$
+\begin{align}
+\Rightarrow F \left(x_0 + \epsilon \right) < F \left(x_0 - \epsilon \right) \\
+I = \int_{F\left(x_0-\epsilon\right)}^{F\left(x_0+\epsilon\right)} dx \;
+\frac{1}{|F' \left(x\left(y\right) \right)|} \delta \left(x\right) \Phi
+\left(x\left(y\right) \right) \\
+= frac{1}{|F' \left(x_0\right)|} \Phi \left(x_0\right)
+\end{align}
+
+Von beiden Seiten kommen wir zum gleichen Ergebnis. Der Wert am Punkt $x_0$ ist
+damit eindeutig bestimmt.
+

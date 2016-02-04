@@ -1,0 +1,48 @@
+\section{Born approximation}
+
+\subsection{a)}
+
+\begin{align}
+f^{\left(1\right)} \left(\vec{q}\right) = - \frac{1}{4\pi} \frac{2M}{\hbar^2}
+\int d^3r \; e^{iqr} V\left(\vec{r}\right) \\
+= - \frac{2M}{\hbar^2q} \int_0^{\infty} dr \; rV\left(r\right)
+sin\left(qr\right)
+\end{align}
+
+Mit einem radialen Potential \\
+$V\left( \vec{r} \right)= V\left(r\right) = V_0
+\frac{e^{i\kappa r}}{r}$ \\
+verschwindet die lineare Abh\"angigkeit des
+Integrals.
+
+\begin{align}
+= - \frac{2M}{\hbar^2q} \frac{1}{2r} \int_0^{\infty} dr \; \left[ e^{i\kappa r
++iqr}-e^{-\kappa r -iqr} \right] \\
+= \frac{2m V_0}{\hbar^2q} \frac{1}{2i} \left[
+-\frac{1}{\kappa+iq}-\frac{-1}{\kappa-iq} \right] \\
+= - \frac{2MV_0}{\hbar^2\left(q^2+\kappa^2\right)} \\
+\lim\limits{\kappa\rightarrow 0} \left{\ldots\right} = - \frac{2MV_0}{\hbar^2
+q^2}
+\end{align}
+
+\subsection{b)}
+
+\begin{align}
+V\left(\vec{r}\right) = \int dr' \; \zeta \left(\vec{r}'\right)
+W\left(\vec{r}-\vec{r}'\right) \\
+f^{\left(1\right)} \left(\vec{q}\right) = - \frac{1}{4\pi} \frac{2M}{\hbar^2}
+\int dr \; e^{iq\vec{r}} \int dr' \; \zeta \left(\vec{r}'\right)
+W\left(\vec{r}-\vec{r}'\right) \\
+= -\frac{1}{e\pi} \frac{2M}{\hbar^2} \int d\eta \; e^{iq
+\left(\vec{\eta}+\vec{r}' \right)} \int dr' \; \zeta \left(\vec{r}'\right)
+W\left(\vec{\eta}\right) \\
+= -\frac{1}{4\pi} \frac{2M}{\hbar^2} \left[ \int d\eta \; e^{iq\vec{\eta}}
+W\left(\vec{\eta}\right) \right] \left[ \int dr' \; \zeta \left(\vec{r}'\right)
+e^{iq\vec{r}'} \right] \\
+\\
+= f_W^{\left(1\right)} \left(\vec{q}\right) \tilde{\zeta}
+\left(\vec{q}\right)
+\end{align}
+
+Mit $\eta = \vec{r}-\vec{r}'$.\\
+In der Scattering Funktion $f$ steckt somit der Formfaktor der Probe mit drin.

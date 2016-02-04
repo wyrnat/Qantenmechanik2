@@ -1,0 +1,45 @@
+\section{Derivation of the Hartree-Fock equations}
+
+\subsection{a)}
+Nicht gemacht
+
+\subsection{b)}
+Nicht gemacht
+
+\subsection{c)}
+
+\begin{align}
+L = E_0 - \sum_{a,b = 1}^N \epsilon_{ba} \left( \Braket{\chi_a|\chi_b} - \delta_{ab} \right) \\
+= E_0 - T \\
+\delta L = \delta E_0 - \delta T \\
+\end{align}
+Nun wollen wir mit dem Variationsprinzip die Energie bestimmen
+
+\begin{align}
+\delta E_0 = \sum_{a=1}^N \left( \Bra{\delta \chi_a} \hat{h} \Ket{\delta \chi_b} \right) \\
++ \frac{1}{2} \sum_{a,b} \left( \left[\delta \chi_a \chi_a | \chi_b \chi_b \right] + \left[\chi_a \chi_a | \delta \chi_b \chi_b \right] + \left[\chi_a \delta \chi_a | \chi_b \chi_b \right] + \left[\chi_a \chi_a | \chi_b \delta \chi_b \right] \right) \\
+- \frac{1}{2} \sum_{a,b} \left( \left[\delta \chi_a \chi_b | \chi_b \chi_a \right] + \left[\chi_a \chi_b | \delta \chi_b \chi_a \right] + \left[\chi_a \delta \chi_b | \chi_b \chi_a \right] + \left[\chi_a \chi_b | \chi_b \delta \chi_a \right] \right)
+\end{align}
+Nun der kinetische Teil
+
+\begin{align}
+\delta T = \sum_{a,b} \epsilon_{ba} \left( \Braket{\delta \chi_a|\chi_b} + \Braket{\chi_b|\delta \chi_a} \right) \\
+= \sum_{a,b} \epsilon_{ba} \left( \Braket{\delta \chi_a|\chi_b} + c.c. \right)
+\end{align}
+
+Mit $\left[\chi_a \chi_b | \chi_c \chi_d \right] = \left[\chi_b \chi_a | \chi_d \chi_c \right]$ k\"onnen wir nun dem ersten Term k\"urzen und bestimmen $\delta L$:
+
+\begin{align}
+\delta L = \sum_{a=1}^N \Bra{\delta \chi_a} \hat{h} \Ket{\chi_a} \\
++ \sum_{a,b}^N \left( \left[\delta \chi_a \chi_a | \chi_b \chi_b \right] - \left[\delta \chi_a \chi_b | \chi_b \chi_a \right] \right) \\
+- \sum_{a,b} \epsilon_{ba} \left[ \Braket{\delta \chi_a | \chi_b} + c.c. \right]
+\end{align}
+
+\subsection{d)}
+Um die optimalen $\chi$ zu finden, setzen wir $\delta L = 0$ und wechseln in die Integralform
+
+\begin{align}
+0 = \sum_{a=1}^N \int dx_1 \; \delta \chi_a^* \left( x_1 \right) \left[ h \chi_a \left( x_1 \right) + \sum_{b=1}^N \left( J_b - K_b \right) \chi_a \left( x_1 \right) - \sum_{b=1}^N \epsilon_{ba} \chi_b \left( x_1 \right) \right] + c.c. \\
+\Rightarrow h \chi_a + \sum_l \left( J_l - K_l \right) \chi_a = \sum_b \epsilon_{ba} \chi_b
+\end{align}
+Diese Gleichung ist identisch zu der Hartree-Fock Gleichung aus der Vorlesung.

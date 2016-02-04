@@ -1,0 +1,112 @@
+\section{The Residue Theorem}
+
+In dieser Aufgabe behandeln wir das Lippmann-Schwinger Theorem und die
+Behandlung von Integralen mit dem Residuensatz. Der Residuensatz lautet:
+\begin{align}
+\oint_c f \left( z \right) dz = 2 \pi i \sum_{k=1}^{N} Res \left(f,a_k\right)
+\end{align}
+mit $a_k$ als den Polstellen von $f\left(z\right)$ und der Residue
+\begin{align}
+Res \left(f, a_k\right) = \frac{1}{\left(n-1\right)!} \lim \limits_{z
+\rightarrow a_k} \frac{\partial^{n-1}}{\partial z^{n-1}} \left[
+\left(z-a_k\right)^n f \left(z\right) \right]
+\end{align}
+
+\subsection{a)}
+
+Zu zeigen: $\int_0^{\infty} \frac{dx}{\left(x^2+1\right)^2} = - \frac{\pi}{4} $
+
+\begin{align}
+\int_{-R}^R \frac{dx}{\left(x^2+1\right)^2} = \oint_C
+\frac{dz}{\left(z^2+1\right)^2} - \int_S
+\frac{dz}{\left(z^2+1\right)^2}
+\end{align}
+
+Nach dem Residuensatz integriert man von $- \infty$ nach $\infty$ und schlie\"st
+das Integral zu einem geschlossenen Wegintegral, indem man imagin\"ar \"uber
+einen Halbkreis im 2dim Raum integriert. Das Integral entlang $C$ beschreibt
+diesen Weg, das Integral $S$ zieht den Halbkreis wieder ab. \\
+$S$ wird beschrieben mit $S = R e^{i \alpha}$. F\"ur $R \rightarrow \infty$
+ergibt sich:
+\begin{equation}
+\int_S \frac{dz}{\left(z^2+1\right)^2} = 0
+\end{equation}
+Siehe Blatt 10.\\
+Nun werden wir das Integral mithilfe des Residuensatzes in 3 Schritten l\"osen:
+\\
+\textbf{i)} Finde die Polstellen $a_f$
+
+\begin{align}
+\left(z^2+1\right)^2 = \left(z-i\right)^2 \left(z+i\right)^2 \\
+\Rightarrow \; a_1 = i \\
+\Rightarrow \; a_2 = -i
+\end{align}
+
+\textbf{ii)} Bestimmung der Residuen \\
+Nun bestimmen wir die Residue f\"ur $a_2$, da nur diese innerhalb des
+geschlossenen Wegintegrals liegt. $a_1$ wird nicht eingeschlossen und spielt als
+Polstelle deshalb keine Rolle
+
+\begin{align}
+Res \left( \frac{1}{\left(z^2+1\right)^2} \; , \; i \right) =
+\frac{\partial}{\partial z} \left[ \left(z-i\right)^2
+\frac{1}{\left(z-i\right)^2 \left(z+i\right)^2} \right] \\
+= \frac{\partial}{\partial z} \frac{1}{\left(z+i\right)^2} \\
+= \frac{-2}{\left(z+i\right)^3} \bigg|_{z=i} = \frac{1}{4i}
+\end{align}
+Somit l\"asst sich das Integral l\"osen
+
+\begin{align}
+\int_0^{\infty} \frac{dx}{\left(x^2+1\right)^2} = \frac{1}{2} \lim \limits_{R
+\rightarrow \infty} \int_{-R}^{R} \frac{dx}{\left(x^2+1\right)^2} \\
+= \frac{1}{2} \lim \limits_{R \rightarrow \infty} \oint_C
+\frac{dz}{\left(z^2+1\right)^2} \\
+= \frac{1}{2} 2 \pi i \left( \frac{1}{4i} \right) \\
+= \frac{\pi}{4}
+\end{align}
+
+\subsection{b)}
+Zu zeigen:
+
+\begin{align}
+\int_{-\infty}^{\infty} dq \frac{q \left(e^{iqx}-e^{-iqx}\right)}{q^2 -k^2 \mp
+i\epsilon} = 2  \pi i e^{\pm ikx}
+\end{align}
+
+\begin{align}
+\int_{-\infty}^{\infty} dq \frac{q \left(e^{iqx}-e^{-iqx}\right)}{q^2 -k^2 \mp
+i\epsilon} \\
+= 2 \int_{-\infty}^{\infty} dq \frac{q e^{iqx}}{q^2 -k^2 \mp
+i\epsilon} \\
+= 2 \int_{-\infty}^{\infty} dq \; f \left(q\right)
+\end{align}
+
+\textbf{i)} Bestimmung der Polstellen
+
+\begin{align}
+q^+ = h \sqrt{1 \pm \frac{i\epsilon}{k}} \approx h \pm \epsilon ' \\
+q^- = -h \sqrt{1 \pm \frac{i\epsilon}{k}} \approx -h \mp \epsilon '
+\end{align}
+Mit $\epsilon ' = \frac{\epsilon}{2k}$. \\
+\\
+\textbf{ii)} Bestimmung der Residuen \\
+
+\begin{align}
+Res \left( f \left(q\right) , q^{\pm} \right) = \left( q - q^{\pm} \right)
+\frac{q e^{iqx}}{\left(q-q^-\right)\left(q-q^+\right)} \bigg|_{q=q^{\pm}} \\
+= \frac{q e^{iqx}}{\left(q-q^+\right)} \bigg|_{q=q^{\pm}} \\
+= \frac{q^{\pm}e^{iq^{\pm}x}}{2q^{\pm}} \\
+= \frac{1}{2} e^{\pm ikx} e^{\mp \epsilon x}
+\end{align}
+F\"ur $\epsilon \rightarrow 0$ bedeutet dies
+
+\begin{equation}
+Res \left( f \left(q\right) , q^{\pm} \right) = \frac{1}{2} e^{\pm ikx}
+\end{equation}
+Damit k\"onne wir nun das Integral l\"osen
+
+\begin{align}
+2 \int_{-\infty}^{\infty} dq \; f \left(q\right) = 2 \pi i Res \left(f
+\left(q\right) \right) \\
+= 2 \pi i e^{\pm ikx}
+\end{align}

@@ -1,0 +1,80 @@
+\section{The He-Atom}
+
+\begin{equation}
+H = H_1 + H_2 + W_{12}
+\end{equation}
+
+$H1$ und $H_2$ sind die Hamiltonien der Elektronen, $W_{12}$ ist der Austauschterm
+
+\subsection{a)}
+
+1) Wenn $\Phi_1 \neq \Phi_2$, dann gilt
+\begin{equation}
+\Psi_A \left( r_2, r_1 \right) \neq \pm \Psi_A \left(r_1, r_2 \right)
+\end{equation}
+
+Das ergibt keinen Sinn f\"ur Partikel des gleichen Typus.\\
+ \\
+2) Das bedeutet, dass $\Psi_B \left( r_2, r_1 \right) = - \Psi_B \left( r_1, r_2 \right)$ womit wir es mit \textbf{Fermionen} zu tun haben.\\
+ \\
+3) Das bedeutet Nichtunterscheidbarkeit zwischen den Wellenfunktionen mit $\Psi_B \left( r_2, r_1 \right) = - \Psi_B \left( r_1, r_2 \right)$ und es handelt sich um \textbf{Bosonen}.
+
+\subsection{b)}
+
+i)
+\begin{align}
+E_A \left( \Phi_1 , \Phi_2 \right) = \Bra{\Phi_1 \Phi_2} H_1 \mathbbm{1} + \mathbbm{1} H_2 + W_{12} \Ket{\Phi_1 \Phi_2} \\
+= \Bra{\Phi_1} H_1 \Ket{\Phi_1} + \Bra{\Phi_2} H_2 \Ket{Phi_2} + \Bra{\Phi_1 \Phi_2} W_12 \Ket{\Phi_1 \Phi_2}
+\end{align}
+
+ii)
+\begin{align}
+2 E_B \left( \Phi_1 , \Phi_2 \right) = 
+\Braket{\Phi_1|\Phi_1}  \Bra{\Phi_2} H_1 \Ket{\Phi_2} - \Braket{\Phi_1|\Phi_2}  \Bra{\Phi_2} H_1 \Ket{\Phi_1} \\
+- \Braket{\Phi_2|\Phi_1}  \Bra{\Phi_1} H_1 \Ket{\Phi_2} + \Braket{\Phi_2|\Phi_2}  \Bra{\Phi_1} H_1 \Ket{\Phi_1} \\
++ \left[1 \leftrightarrow 2 \right] \\
++ \Bra{\Phi_1 \Phi_2} W_{12} \Ket{\Phi_1 \Phi_2} + \Bra{\Phi_2 \Phi_1} W_{12} \Ket{\Phi_2 \Phi_1} \\
+- \Bra{\Phi_1 \Phi_2} W_{12} \Ket{\Phi_2 \Phi_1} - \Bra{\Phi_2 \Phi_1} W_{12} \Ket{\Phi_1 \Phi_2}
+\end{align}
+Mit $\Bra{\Phi_1 \Phi_2} = \Bra{\Phi_2 \Phi_1} \hat{P}_{12}$, weil $H_1 = H_2$, folgt
+
+\begin{equation}
+2 E_B = 2 \left[ \Bra{\Phi_2} H_2 \Ket{\Phi_2} + \Bra{\Phi_1} H_1 \Ket{\Phi_1} \right] + \Bra{\Phi_1 \Phi_2} W_{12} \Ket{\Phi_1 \Phi_2} - \Bra{\Phi_1 \Phi_2} W_{12} \Ket{\Phi_2 \Phi_1} 
+\end{equation}
+
+\subsection{c)}
+
+Mit dem Variationsprinzip
+\begin{equation}
+L = E_{A/B} + \sum_{i,j} \left( \Braket{\Phi_i|\Phi_j} - \delta_{ij} \right) \epsilon_{ij}
+\end{equation}
+gilt es, die optimalen Zust\"ande zu finden
+
+i)
+\begin{equation}
+\delta E_A = \Bra{\delta \Phi_1} H_1 \Ket{\Phi_1} + \Bra{\delta \Phi_2} H_1 \Ket{\Phi_2} + \Bra{\delta \Phi_1 \Phi_2} W_{12} \Ket{\Phi_1 \Phi_2} + \Bra{\Phi_1 \delta \Phi_2} W_{12} \Ket{\Phi_1 \Phi_2} + \\
+ C.C. + O \left(\delta \Phi_i^2 \right)
+\end{equation}
+Optimierung mit dem Variationsprinzip: $\delta L = 0$
+
+\begin{align}
+H_1 \Ket{\Phi_1} + \Bra{\Phi_2} W_{12} \Ket{\Phi_1 \Phi_2} = \epsilon_{11} \Ket{\Phi_1} + \epsilon{12} \Ket{\Phi_2} \\
+H_2 \Ket{\Phi_2} + \Bra{\Phi_1} W_{12} \Ket{\Phi_2 \Phi_1} = \epsilon_{22} \Ket{\Phi_2} + \epsilon{21} \Ket{\Phi_1} 
+\end{align}
+
+ii)
+\begin{align}
+H_1 \Ket{\Phi_1} + \Bra{\Phi_2} W_{12} \Ket{\Phi_1 \Phi_2} - \Bra{\Phi_2} W_{12} \Ket{\Phi_2 \Phi_1} = \epsilon_{11} \Ket{\Phi_1} + \epsilon{12} \Ket{\Phi_2} \\
+H_2 \Ket{\Phi_2} + \Bra{\Phi_1} W_{12} \Ket{\Phi_2 \Phi_1} - \Bra{\Phi_1} W_{12} \Ket{\Phi_1 \Phi_2} = \epsilon_{22} \Ket{\Phi_2} + \epsilon{21} \Ket{\Phi_1} 
+\end{align}
+
+\subsection{d)}
+
+Es gibt 4 Spin-Konfigurationen
+\begin{align}
+\Ket{\uparrow \uparrow} \\
+\Ket{\downarrow \downarrow} \\
+\frac{1}{\sqrt{2}} \left( \Ket{ \uparrow \downarrow} + \Ket{ \downarrow + \uparrow} \right) \\
+\frac{1}{\sqrt{2}} \left( \Ket{ \uparrow \downarrow} - \Ket{ \downarrow + \uparrow} \right)
+\end{align}
+In den ersten 3 F\"allen muss dadurch die Ortsfunktion antisymmetrisch sein, also handelt es sich um Fermionen. Der letzte Fall ist ein Boson

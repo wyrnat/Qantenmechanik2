@@ -1,0 +1,35 @@
+\section{the Hartree-Fock energy functional}
+
+\subsection{a)}
+
+\begin{align}
+\Bra{\Psi_0} \hat{O}_1 \Ket{\Psi_1} = \sqrt{N!} \sum_{i=1}^N \Bra{\Psi_0} \hat{h}_i \Ket{\chi_1 ... \chi_N} \\
+= \sum_{i=1}^N \sum_p \left( -1 \right)^{sign \left( P \right)} \Bra{\chi_{p_1} ... \chi_{p_n}} \hat{h}_i \Ket{\chi_1 ... \chi_N}
+\end{align}
+Mit $\Bra{\chi_{p_1} ... \chi_{p_n}} \hat{h}_i \Ket{\chi_1 ... \chi_N} = \Bra{\chi_{p_i}} \hat{h}_i  \Ket{\chi_i} \prod_{j \neq i} \Braket{ \chi_{p_j} | \chi_j}$ folgt
+
+\begin{align}
+\Bra{\Psi_0} \hat{O}_1 \Ket{\Psi_1} = \left(-1 \right)^{sign \left( id \right)} \sum_{i=1}^N \Bra{\chi_i} \hat{h} \Ket{\chi_i}
+\end{align}
+
+\subsection{b)}
+
+\begin{align}
+\hat{O}_2 = \frac{1}{2} \sum_{i \neq j} \frac{e^2}{|r_i - r_j|} = \frac{1}{2} \sum_{i \neq j} \hat{V}_{ij} \\
+\Bra{\Psi_0} \hat{O}_2 \Ket{\Psi_0} = \frac{1}{2} \sum_{i \neq j} \sum_p  \left(-1 \right)^{sign \left( p \right)} \Bra{\chi_{p_i} \chi_{p_j}} V_{ij} \Ket{\chi_i \chi_j} \prod_{k \neq i,j} \Braket{\chi_{p_k} | \chi_k}
+\end{align}
+Es tragen nur Summenelemente bei f\"ur $P \in \left[ id, \pi_{ij} \right]$. Damit reduziert sich die Summe auf
+
+\begin{align}
+\Bra{\Psi_0} \hat{O}_2 \Ket{\Psi_0} = \frac{1}{2} \sum_{i \neq j} \left[  \left(-1 \right)^{sign \left( id \right)} \Bra{\chi_i \chi_j} V_{ij} \Ket{\chi_i \chi_j} + \left(-1 \right)^{sign \left( \pi_{ij} \right)} \Bra{\chi_j \chi_i} V_{ij} \Ket{\chi_i \chi_j} \right]
+\end{align}
+Somit fassen wir zusammen
+
+\begin{equation}
+\Bra{\Psi_0} \hat{O}_2 \Ket{\Psi_0} = \frac{1}{2} \sum_{i \neq j} \left[ \Bra{\chi_i \chi_j} V_{12} \Ket{\chi_i \chi_j} - \Bra{\chi_i \chi_j} V_{12} \Ket{\chi_i \chi_j} \right] \\
+= \frac{1}{2} \sum_{i \neq j} \left( \left[ \chi_i \chi_i | \chi_j \chi_j \right] - \left[ \chi_j \chi_i | \chi_i \chi_j \right] \right)
+\end{equation}
+
+\subsection{c)}
+
+Wurde nicht gemacht. Es m\"ussen nur die Terme zusammengefasst werden
