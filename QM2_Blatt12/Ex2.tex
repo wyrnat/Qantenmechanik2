@@ -1,1 +1,83 @@
 \section{Scattering of a hard-sphere potential}
+
+Ziel ist die Bestimmung der Phasenverschiebung und der Streuquerschnitt. Das
+Potential lautet
+\begin{align}
+V \left(r\right) = 
+\begin{Bmatrix}
+\infty, & r<R \\
+0, & r>R
+\end{Bmatrix}
+\end{align}
+
+\subsection{a)}
+
+Randbedingung bei $r=R$
+
+\begin{align}
+0 = A-l \left(R\right) \\
+= e^{i\delta_l} \left[\gamma_l\left(R\right)cos \left(\delta_l\right) - n_l
+\left(R\right) sin \left(\delta_r\right) \right]
+\end{align}
+
+mit $tan \left(\delta_l\right) = \frac{\gamma_l \left(\kappa R\right)}{n_l
+\left(\kappa R\right)} $
+
+\subsection{b)}
+
+\begin{align}
+tan \left(\delta_0\right) = \frac{\gamma_0}{n_0} \\
+= \frac{\frac{1}{kR} sin \left(kR\right)}{-\frac{1}{kR} cos\left(kR\right) } =
+-tan \left(kR\right)
+\end{align}
+
+$\delta_0$ betrifft die ``s-wave'' Streuung mit Drehimpuls $l=0$. Die
+Wellenfunktion lautet dann
+	
+\begin{align}
+A_0 \left(r\right) = e^{ikR} \left[ \frac{\sin{kR}}{kR} \cos{kR} -
+\frac{\cos{kr}}{kr} \sin{kR} \right] \\
+= e^{ikR} \left[ \frac{sin \left(kr-kR\right)}{kR} \right]
+\end{align}
+
+\subsection{c)}
+
+Mit $k \rightarrow 0$:
+
+\begin{align}
+\tan{\delta_l} = \frac{\gamma_l\left(kR\right) }{n_l\left(kR\right) } \\
+\rightarrow
+\frac{-\left(kR\right)^{2l+1}}{\left(2l+1\right)!!\left(2l-1\right)!!}
+=
+\frac{-\left(kR\right)^{2l+1}}{\left(2l+1\right)\left[\left(2l-1\right)!!\right]^2}
+\end{align}
+
+Nun wird gezeigt, dass nur die Ber\"ucksichtigung von ``s-wave'' Streuung bei
+kleinen Energien ausreichend ist.\\
+Mit $k \rightarrow 0$:
+
+\begin{align}
+\frac{\delta_1}{\delta_0} =
+\frac{\arctan{\frac{\left(kR\right)^3}{3}}}{\arctan{kR}} =
+\frac{\frac{\left(kR\right)^3}{3}}{kR-\frac{\left(kR\right)^3}{3}} \\
+= \frac{1}{\frac{3}{\left(kR\right)^2}-1} \approx \frac{\left(kR\right)^2}{3}
+\rightarrow 0
+\end{align}
+
+Allgemein gilt
+
+\begin{align}
+\frac{\delta_{l+1}}{\delta_l} \propto \frac{c_{l+1}}{c_l} \left(kR\right)^2
+\end{align}
+
+Mit $c_l = \frac{1}{\left(2l+1\right)\left[\left(2l-1\right)!! \right]^2}$
+
+\subsection{d)}
+
+\begin{align}
+\sigma_{tot} = \frac{4\pi}{k^2} \sum_{l=0}^{\infty} \left(2l+1\right) sin^2
+\left(\delta_l\right) \\
+\approx \frac{4\pi}{k^2} sin^2 \left(\delta_0\right) \approx \frac{4\pi}{k^2}
+\left(kR\right)^2 \\
+= 4\pi R^2
+\end{align}
